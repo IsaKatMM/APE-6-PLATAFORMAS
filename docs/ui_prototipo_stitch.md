@@ -36,7 +36,7 @@ El flujo de la aplicación sigue la siguiente estructura:
 
 **Captura de Pantalla:**
 
-![Pantalla de Login](docs/img/login.png)
+![Pantalla de Login](img/login.png)
 
 ---
 
@@ -57,7 +57,7 @@ El flujo de la aplicación sigue la siguiente estructura:
 
 **Captura de Pantalla:**
 
-![Dashboard de Usuario](docs/img/user-dashboard.png)
+![Dashboard de Usuario](img/user-dashboard.png)
 
 ---
 
@@ -76,7 +76,7 @@ El flujo de la aplicación sigue la siguiente estructura:
 
 **Captura de Pantalla:**
 
-![Lista de Ejercicios](docs/img/ejercicios-lista.png)
+![Lista de Ejercicios](img/ejercicios-lista.png)
 
 ---
 
@@ -97,7 +97,7 @@ El flujo de la aplicación sigue la siguiente estructura:
 
 **Captura de Pantalla:**
 
-![Entrenamiento del Día](docs/img/entrenamiento-dia.png)
+![Entrenamiento del Día](img/entrenamiento-dia.png)
 
 ---
 
@@ -118,7 +118,7 @@ El flujo de la aplicación sigue la siguiente estructura:
 
 **Captura de Pantalla:**
 
-![Estadísticas](docs/img/estadisticas.png)
+![Estadísticas](img/estadisticas.png)
 
 ---
 
@@ -139,7 +139,7 @@ El flujo de la aplicación sigue la siguiente estructura:
 
 **Captura de Pantalla:**
 
-![Recetas Saludables](docs/img/recetas.png)
+![Recetas Saludables](img/recetas.png)
 
 ---
 
@@ -167,7 +167,7 @@ El flujo de la aplicación sigue la siguiente estructura:
 
 **Captura de Pantalla:**
 
-![Perfil de Usuario](docs/img/user-profile.png)
+![Perfil de Usuario](img/user-profile.png)
 
 ---
 
@@ -191,7 +191,7 @@ El flujo de la aplicación sigue la siguiente estructura:
 
 **Captura de Pantalla:**
 
-![Dashboard de Administrador](docs/img/admin-dashboard.png)
+![Dashboard de Administrador](img/admin-dashboard.png)
 
 ---
 
@@ -215,7 +215,7 @@ El flujo de la aplicación sigue la siguiente estructura:
 
 **Captura de Pantalla:**
 
-![Perfil de Administrador](docs/img/admin-profile.png)
+![Perfil de Administrador](img/admin-profile.png)
 
 ---
 
@@ -235,19 +235,3 @@ El flujo de la aplicación sigue la siguiente estructura:
 - **Navegación Intuitiva** - Barra inferior fija en vistas de usuario
 - **Animaciones Sutiles** - Transiciones suaves en hover y clicks
 
-## Estructura de Carpetas Sugerida
-```
-FitSIL/
-│
-├── docs/
-│   └── img/
-│       ├── login.png
-│       ├── user-dashboard.png
-│       ├── ejercicios-lista.png
-│       ├── entrenamiento-dia.png
-│       ├── estadisticas.png
-│       ├── recetas.png
-│       ├── user-profile.png
-│       ├── admin-dashboard.png
-│       └── admin-profile.png
-│
