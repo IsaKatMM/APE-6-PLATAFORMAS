@@ -1,4 +1,4 @@
-# FitSIL - Fitness Sign Language Application
+# FitSIL - Sistema de Gestion de Ejercicios Físicos
 
 ## Descripción del Proyecto
 
