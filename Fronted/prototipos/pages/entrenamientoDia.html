@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Workout of the Day Page</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1abcac",
+              "background-light": "#f6f8f8",
+              "background-dark": "#11211f",
+              "content-light": "#0e1b19",
+              "content-dark": "#e0ebea",
+              "card-light": "#ffffff",
+              "card-dark": "#1a2c2a",
+              "secondary-light": "#50958e",
+              "secondary-dark": "#a0c3bf",
+              "border-light": "#d1e6e4",
+              "border-dark": "#2a4d49",
+            },
+            fontFamily: {
+              display: ["Lexend", "sans-serif"],
+            },
+            borderRadius: { DEFAULT: "1rem", lg: "1.5rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      :root {
+        --checkbox-tick-svg: url("data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(14,27,25)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e");
+      }
+      html.dark :root {
+        --checkbox-tick-svg: url("data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(224,235,234)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e");
+      }
+      .checked\:bg-\[image\:--checkbox-tick-svg\] {
+        background-image: var(--checkbox-tick-svg);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display"
+    x-data="{ isMenuOpen: false }"
+  >
+    <div class="relative flex min-h-screen w-full flex-col">
+      <header
+        class="sticky top-0 z-10 flex h-16 items-center justify-between bg-background-light/80 dark:bg-background-dark/80 px-4 backdrop-blur-sm"
+      >
+        <a class="text-xl font-bold text-primary" href="userDasboard.html">FitSIL</a>
+        <button
+          @click="isMenuOpen = !isMenuOpen"
+          class="text-content-light dark:text-content-dark z-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
+        >
+          <span
+            class="material-symbols-outlined text-2xl"
+            x-text="isMenuOpen ? 'close' : 'menu'"
+          ></span>
+        </button>
+      </header>
+      <nav
+        :class="{'translate-x-0': isMenuOpen, 'translate-x-full': !isMenuOpen}"
+        class="fixed inset-0 z-20 flex transform flex-col bg-background-light dark:bg-background-dark pt-20 transition-transform duration-300 ease-in-out"
+      >
+        <a
+          class="border-b border-border-light dark:border-border-dark px-6 py-4 text-base text-content-light dark:text-content-dark"
+          href="userDashboard.html"
+          >Dashboard</a
+        >
+        <a
+          class="border-b border-border-light dark:border-border-dark px-6 py-4 text-base text-content-light dark:text-content-dark"
+          href="ejerciciosLista.html"
+          >Ejercicios</a
+        >
+        <a
+          class="border-b border-border-light dark:border-border-dark bg-primary/10 px-6 py-4 text-base font-bold text-primary"
+          href="entrenamientoDia.html"
+          >Entrenamiento del Día</a
+        >
+        <a
+          class="border-b border-border-light dark:border-border-dark px-6 py-4 text-base text-content-light dark:text-content-dark"
+          href="estadisticas.html"
+          >Estadísticas</a
+        >
+        <a
+          class="border-b border-border-light dark:border-border-dark px-6 py-4 text-base text-content-light dark:text-content-dark"
+          href="microservicioRecetas.html"
+          >Recetas</a
+        >
+        <a
+          class="border-b border-border-light dark:border-border-dark px-6 py-4 text-base text-content-light dark:text-content-dark"
+          href="userProfile.html"
+          >Perfil</a
+        >
+      </nav>
+      <main class="flex-1 px-4 pb-4">
+        <p
+          class="text-secondary-light dark:text-secondary-dark mb-4 text-center font-normal leading-normal"
+        >
+          Tuesday, October 26
+        </p>
+        <div
+          class="mb-6 flex flex-col gap-2 rounded-lg bg-card-light dark:bg-card-dark p-4 shadow-sm"
+        >
+          <div class="flex items-baseline justify-between">
+            <p
+              class="text-base font-medium text-content-light dark:text-content-dark"
+            >
+              Progress
+            </p>
+            <p
+              class="text-sm font-normal text-secondary-light dark:text-secondary-dark"
+            >
+              3/5 Completed
+            </p>
+          </div>
+          <div class="h-2 rounded-full bg-primary/20">
+            <div class="h-2 rounded-full bg-primary" style="width: 60%"></div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div
+            class="rounded-lg bg-card-light dark:bg-card-dark px-4 shadow-sm"
+          >
+            <label
+              class="flex cursor-pointer items-center justify-between gap-x-4 py-4"
+            >
+              <div class="flex flex-col">
+                <p
+                  class="text-base font-medium text-content-light dark:text-content-dark"
+                >
+                  Barbell Squat
+                </p>
+                <p
+                  class="text-sm text-secondary-light dark:text-secondary-dark"
+                >
+                  3 Sets, 10 Reps, 80 kg
+                </p>
+              </div>
+              <input
+                checked=""
+                class="h-6 w-6 shrink-0 cursor-pointer rounded-full border-2 border-border-light dark:border-border-dark bg-transparent text-primary checked:border-primary checked:bg-primary checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0"
+                type="checkbox"
+              />
+            </label>
+          </div>
+          <div
+            class="rounded-lg bg-card-light dark:bg-card-dark px-4 shadow-sm"
+          >
+            <label
+              class="flex cursor-pointer items-center justify-between gap-x-4 py-4"
+            >
+              <div class="flex flex-col">
+                <p
+                  class="text-base font-medium text-content-light dark:text-content-dark"
+                >
+                  Bench Press
+                </p>
+                <p
+                  class="text-sm text-secondary-light dark:text-secondary-dark"
+                >
+                  3 Sets, 10 Reps, 60 kg
+                </p>
+              </div>
+              <input
+                checked=""
+                class="h-6 w-6 shrink-0 cursor-pointer rounded-full border-2 border-border-light dark:border-border-dark bg-transparent text-primary checked:border-primary checked:bg-primary checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0"
+                type="checkbox"
+              />
+            </label>
+          </div>
+          <div
+            class="rounded-lg bg-card-light dark:bg-card-dark px-4 shadow-sm"
+          >
+            <label
+              class="flex cursor-pointer items-center justify-between gap-x-4 py-4"
+            >
+              <div class="flex flex-col">
+                <p
+                  class="text-base font-medium text-content-light dark:text-content-dark"
+                >
+                  Deadlift
+                </p>
+                <p
+                  class="text-sm text-secondary-light dark:text-secondary-dark"
+                >
+                  3 Sets, 8 Reps, 100 kg
+                </p>
+              </div>
+              <input
+                checked=""
+                class="h-6 w-6 shrink-0 cursor-pointer rounded-full border-2 border-border-light dark:border-border-dark bg-transparent text-primary checked:border-primary checked:bg-primary checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0"
+                type="checkbox"
+              />
+            </label>
+          </div>
+          <div
+            class="rounded-lg bg-card-light dark:bg-card-dark px-4 shadow-sm"
+          >
+            <label
+              class="flex cursor-pointer items-center justify-between gap-x-4 py-4"
+            >
+              <div class="flex flex-col">
+                <p
+                  class="text-base font-medium text-content-light dark:text-content-dark"
+                >
+                  Overhead Press
+                </p>
+                <p
+                  class="text-sm text-secondary-light dark:text-secondary-dark"
+                >
+                  4 Sets, 12 Reps, 40 kg
+                </p>
+              </div>
+              <input
+                class="h-6 w-6 shrink-0 cursor-pointer rounded-full border-2 border-border-light dark:border-border-dark bg-transparent text-primary checked:border-primary checked:bg-primary checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0"
+                type="checkbox"
+              />
+            </label>
+          </div>
+          <div
+            class="rounded-lg bg-card-light dark:bg-card-dark px-4 shadow-sm"
+          >
+            <label
+              class="flex cursor-pointer items-center justify-between gap-x-4 py-4"
+            >
+              <div class="flex flex-col">
+                <p
+                  class="text-base font-medium text-content-light dark:text-content-dark"
+                >
+                  Bicep Curls
+                </p>
+                <p
+                  class="text-sm text-secondary-light dark:text-secondary-dark"
+                >
+                  4 Sets, 15 Reps, 15 kg
+                </p>
+              </div>
+              <input
+                class="h-6 w-6 shrink-0 cursor-pointer rounded-full border-2 border-border-light dark:border-border-dark bg-transparent text-primary checked:border-primary checked:bg-primary checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0"
+                type="checkbox"
+              />
+            </label>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 px-4 py-4 backdrop-blur-sm"
+      >
+        <button
+          class="flex w-full cursor-pointer items-center justify-center rounded-full bg-primary/30 h-14 px-5 text-base font-bold text-content-light/40 dark:text-content-dark/40 tracking-wide"
+          disabled=""
+        >
+          <span>Mark Workout as Completed</span>
+        </button>
+      </footer>
+    </div>
+    <script
+      defer=""
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+    ></script>
+  </body>
+</html>

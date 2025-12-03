@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Exercises - FitSIL</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1abcac",
+              "background-light": "#FFFFFF",
+              "background-dark": "#1A1A1A",
+              "text-light": "#1A1A1A",
+              "text-dark": "#FFFFFF",
+              "surface-light": "#F0F0F0",
+              "surface-dark": "#2C2C2C",
+            },
+            fontFamily: {
+              display: ["Lexend", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-display">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden"
+    >
+      <header
+        class="sticky top-0 z-20 flex h-16 w-full items-center justify-between bg-background-light/80 px-4 backdrop-blur-sm dark:bg-background-dark/80"
+      >
+        <a href="user-dashboard.html" class="text-2xl font-bold text-primary">FitSIL</a>
+        <a href="user-dashboard.html"
+          class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-light dark:bg-surface-dark"
+        >
+          <span
+            class="material-symbols-outlined text-text-light dark:text-text-dark"
+            >home</span
+          >
+        </a>
+      </header>
+      <main class="flex flex-1 flex-col pb-20">
+        <div
+          class="sticky top-16 z-10 bg-background-light/80 pt-4 backdrop-blur-sm dark:bg-background-dark/80"
+        >
+          <div class="flex items-center bg-transparent px-4 pb-2">
+            <h2
+              class="text-text-light dark:text-text-dark flex-1 text-2xl font-bold leading-tight tracking-[-0.015em]"
+            >
+              Exercises
+            </h2>
+          </div>
+          <div class="px-4 py-3">
+            <label class="flex flex-col min-w-40 h-12 w-full">
+              <div
+                class="flex w-full flex-1 items-stretch rounded h-full shadow-sm"
+              >
+                <div
+                  class="text-text-light/60 dark:text-text-dark/60 flex border-none bg-surface-light dark:bg-surface-dark items-center justify-center pl-4 rounded-l-md border-r-0"
+                >
+                  <span class="material-symbols-outlined">search</span>
+                </div>
+                <input
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-md text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border-none bg-surface-light dark:bg-surface-dark h-full placeholder:text-text-light/60 dark:placeholder:text-text-dark/60 px-4 pl-2 text-base font-normal leading-normal"
+                  placeholder="Search for an exercise..."
+                  value=""
+                />
+              </div>
+            </label>
+          </div>
+          <div class="flex gap-3 px-4 pb-4 overflow-x-auto">
+            <div
+              class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-primary px-5 shadow"
+            >
+              <p
+                class="text-background-dark text-sm font-semibold leading-normal"
+              >
+                All
+              </p>
+            </div>
+            <div
+              class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark px-5"
+            >
+              <p
+                class="text-text-light dark:text-text-dark text-sm font-medium leading-normal"
+              >
+                Chest
+              </p>
+            </div>
+            <div
+              class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark px-5"
+            >
+              <p
+                class="text-text-light dark:text-text-dark text-sm font-medium leading-normal"
+              >
+                Back
+              </p>
+            </div>
+            <div
+              class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark px-5"
+            >
+              <p
+                class="text-text-light dark:text-text-dark text-sm font-medium leading-normal"
+              >
+                Legs
+              </p>
+            </div>
+            <div
+              class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark px-5"
+            >
+              <p
+                class="text-text-light dark:text-text-dark text-sm font-medium leading-normal"
+              >
+                Shoulders
+              </p>
+            </div>
+            <div
+              class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark px-5"
+            >
+              <p
+                class="text-text-light dark:text-text-dark text-sm font-medium leading-normal"
+              >
+                Arms
+              </p>
+            </div>
+            <div
+              class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark px-5"
+            >
+              <p
+                class="text-text-light dark:text-text-dark text-sm font-medium leading-normal"
+              >
+                Core
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4"
+        >
+          <div
+            class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[3/4] shadow-md"
+            data-alt="A person performing a bench press exercise."
+            style="
+              background-image: linear-gradient(
+                  0deg,
+                  rgba(0, 0, 0, 0.6) 0%,
+                  rgba(0, 0, 0, 0) 60%
+                ),
+                url('https://lh3.googleusercontent.com/aida-public/AB6AXuCE5yqsBYeloL89xhCfrvYZwzIZmfCycRmxPzc_c32nDSm1aYA_pqryk8tsAUSKJhidhuOBsu3KiI1eH370uQD5toxqCxFIEkASN2Zu5H6TOsDnDKOsOnPqo8h2Co4pSMlsR6IVGSVM8TyiMWcKnYIY_FxFchrA2e4bmhJ3KiGCUK267iS5e7c9s5hcHwj2G2YQPlczWGIzPS4efGUxm2oFE7M_VBBibbB54X3ern6T3hUWq5gL6cRsTgLm-YxNYyqjz68xRak22EU');
+            "
+          >
+            <p
+              class="text-white text-base font-bold leading-tight line-clamp-2"
+            >
+              Bench Press
+            </p>
+          </div>
+          <div
+            class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[3/4] shadow-md"
+            data-alt="A person at the bottom of a barbell squat."
+            style="
+              background-image: linear-gradient(
+                  0deg,
+                  rgba(0, 0, 0, 0.6) 0%,
+                  rgba(0, 0, 0, 0) 60%
+                ),
+                url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0Pls5XNrT3nwqVay38ZjrgY26JL4Eaf8naH60jX2a58CnvZx3L515Jn3_rFuj4rGrL3yyLtpgixp9P3Gty8OGanAatYJJlUmH__UIYlMyiWjd9qx53C9X3PDbenYYYOM3HPowIr2S_cEE5VJr4C6CNTnGqAQjoSoPHSPpajfZgwqPi15GCA-RVBL7doT1CqSwoD3f8Izs3zS2eJCxDs8YdGX4BO3XdchEI1qHYMRG9R_TPWPl0zZlTTOXaJ4-g6b1ohwuzmZNQ9g');
+            "
+          >
+            <p
+              class="text-white text-base font-bold leading-tight line-clamp-2"
+            >
+              Squat
+            </p>
+          </div>
+          <div
+            class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[3/4] shadow-md"
+            data-alt="A person lifting a barbell for a deadlift."
+            style="
+              background-image: linear-gradient(
+                  0deg,
+                  rgba(0, 0, 0, 0.6) 0%,
+                  rgba(0, 0, 0, 0) 60%
+                ),
+                url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSOnfIzKnAOzuud9s6oza_QTcCJyTvh1Uz7Izw39Fji0HxElx59Pkg9dNoeWm8BEwvky1pwMqjLtfF2gWJGXlNG5h9egli_Rc0FiivqMSqR4S4vXD9726VsrhyfZpMAqWUydhMBuQMfCMURi2Op_Wt_R4wWkdqMHbe29SYA8Tbb3NVnTMPj2ZcjHw7jisXjZsp317wlswRVTtSBxVyZxXDfhqS97vo_2lKDDSnifOyJai-dYl2Y6S_rrrLnupk_7gxOSuHtj0f054');
+            "
+          >
+            <p
+              class="text-white text-base font-bold leading-tight line-clamp-2"
+            >
+              Deadlift
+            </p>
+          </div>
+          <div
+            class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[3/4] shadow-md"
+            data-alt="A person performing an overhead press with a barbell."
+            style="
+              background-image: linear-gradient(
+                  0deg,
+                  rgba(0, 0, 0, 0.6) 0%,
+                  rgba(0, 0, 0, 0) 60%
+                ),
+                url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVy6reSiy9Ri7xDPBoIl_jQOYeQFbNsNA5-yt-Eof90hy6EzJTINGAN3Zj1VGp6Wv0l1j-0nBADaOOy2VzYTD27gvHVZj3z5EcsELaToJ3usnArpcXZtZAdBkqQvFogNMlb53Xh25V5sfNbQXu0x5Lrpo9g6fXBS1kEEefR7WkIt8ky0H0OCRJ99WCYkXFsGOTwhnHtLQLc5dDhb72QUNaAEkif7QS6y5EZoywevVyC-G2VZ1Jva5kqYsjREeYnYTGfHUBET60mx0');
+            "
+          >
+            <p
+              class="text-white text-base font-bold leading-tight line-clamp-2"
+            >
+              Overhead Press
+            </p>
+          </div>
+          <div
+            class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[3/4] shadow-md"
+            data-alt="A person doing a pull-up on a bar."
+            style="
+              background-image: linear-gradient(
+                  0deg,
+                  rgba(0, 0, 0, 0.6) 0%,
+                  rgba(0, 0, 0, 0) 60%
+                ),
+                url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDtNOPA2PYx_GRYMuX7dd-ueOrfIOh4aY927CNoK025ztK1Cp2SYAULuIRWeXF5pu6DBAn9ENq_ndYa4Lwirx_vCVTo_eTnF3cVvfq4IM2BRxmXDcy_ds7klTZtTo9RHC-wCHxEJQ6MZjHFF_ob29e8z31tircSebGVzrkD1jCM0NEs9Kr9OfUClG31EzvsMLoRJbD_slZOHXzS5VTDkJJ5MsHwXajFzIBHtUcwk9KxKSGGmm6dXXQYtb3TWU7k4jm0FuQPMDvdPQ');
+            "
+          >
+            <p
+              class="text-white text-base font-bold leading-tight line-clamp-2"
+            >
+              Pull-up
+            </p>
+          </div>
+          <div
+            class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[3/4] shadow-md"
+            data-alt="A person doing a bent-over barbell row."
+            style="
+              background-image: linear-gradient(
+                  0deg,
+                  rgba(0, 0, 0, 0.6) 0%,
+                  rgba(0, 0, 0, 0) 60%
+                ),
+                url('https://lh3.googleusercontent.com/aida-public/AB6AXuA951AO_YISjzAwk8_KOMhqaCP6ehZ74O5ATSOByaJ5IFAV85UgT4ws5_6HHbQvYtHjO3l17ul8qGO7cUrErQPGUO4iMpipmWYBc5uRaIA1RKs3Q83eyvorj5V5gcWulgcgAYjJaDDnNIkoSqNEIlhCFogBZV6vFBGCxpQLcZpMHF99wOmVDwBVag8VPhdBawrBEOhzHGTUSBp5Ixw6tL2TVijvMJ2WgS4NgMecO8S9dGf6nH4uNKu4t3Famd15ogkmr6BCiCGkWNo');
+            "
+          >
+            <p
+              class="text-white text-base font-bold leading-tight line-clamp-2"
+            >
+              Barbell Row
+            </p>
+          </div>
+          <div
+            class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[3/4] shadow-md"
+            data-alt="A person doing dumbbell bicep curls."
+            style="
+              background-image: linear-gradient(
+                  0deg,
+                  rgba(0, 0, 0, 0.6) 0%,
+                  rgba(0, 0, 0, 0) 60%
+                ),
+                url('https://lh3.googleusercontent.com/aida-public/AB6AXuAE7DbNbCEJyb5eu9LtZxYHXUrOsVal7_b3od92Mm8wcgtWdD8IPqk05zDdJyrROKrDgX5ayYVCx-8JbyLFFKJmdnXbLVDyPwFI6RNSSm8MAqzl3pHml_uzPqQ4QNLZWx8ygjlKGEfPZ6LoBxPoCfMi60V4RhCWBu4vv_FEDpwWEmCTp-0-OlURlwE18Tf6x1p1uI9hP9GwNhB3R60OIPmUv6ivT0NKr6I5RA5b-pNeGTEnSRnIcPyTTcWDoJKtmsQmh4_BYo3kOBA');
+            "
+          >
+            <p
+              class="text-white text-base font-bold leading-tight line-clamp-2"
+            >
+              Dumbbell Curls
+            </p>
+          </div>
+          <div
+            class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[3/4] shadow-md"
+            data-alt="A person performing a plank exercise."
+            style="
+              background-image: linear-gradient(
+                  0deg,
+                  rgba(0, 0, 0, 0.6) 0%,
+                  rgba(0, 0, 0, 0) 60%
+                ),
+                url('https://lh3.googleusercontent.com/aida-public/AB6AXuB70iYbFB_wl97ra3QrmswLyC32O9AzwGymn4-drdZCktQ-VmT8SptIFDwz0ulbFYnbh9afYwfE0g6PGP92frPBmX4Cdpq68298-D5sGxBCzU6UO3atQ3G7vZebEfqO8xHsdA2nYvgBkzaHX8QqKivYH9G1WihZW0YnwEF1Tf1gvgV_bdKSSbFdiehWIaHd6FfahzNsbahoD4aVZNPzC3DiF4aUN7BMnxQ38DQY0EeHSzC70QfpZoSNzCftLaggoztTkm0BGqKZQ70');
+            "
+          >
+            <p
+              class="text-white text-base font-bold leading-tight line-clamp-2"
+            >
+              Plank
+            </p>
+          </div>
+        </div>
+      </main>
+      
+      <!-- Bottom Navigation from Recipes page for consistency -->
+      <nav
+        class="sticky bottom-0 z-10 flex justify-around items-center h-20 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm border-t border-black/5 dark:border-white/5"
+      >
+        <a
+          class="flex flex-col items-center gap-1 text-[#50958e] dark:text-primary/80"
+          href="userDashboard.html"
+        >
+          <span class="material-symbols-outlined">home</span>
+          <span class="text-xs">Inicio</span>
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 text-primary dark:text-primary"
+          href="ejerciciosLista.html"
+        >
+          <span class="material-symbols-outlined font-bold" style="font-variation-settings: 'FILL' 1">exercise</span>
+          <span class="text-xs font-bold">Rutinas</span>
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 text-[#50958e] dark:text-primary/80"
+          href="microservicioRecetas.html"
+        >
+          <span class="material-symbols-outlined">restaurant_menu</span>
+          <span class="text-xs">Recetas</span>
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 text-[#50958e] dark:text-primary/80"
+          href="estadisticas.html"
+        >
+          <span class="material-symbols-outlined">bar_chart</span>
+          <span class="text-xs">Progreso</span>
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 text-[#50958e] dark:text-primary/80"
+          href="userProfile.html"
+        >
+          <span class="material-symbols-outlined">account_circle</span>
+          <span class="text-xs">Perfil</span>
+        </a>
+      </nav>
+    </div>
+  </body>
+</html>

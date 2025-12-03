@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Healthy Recipes - FitSIL</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1abcac",
+              "background-light": "#f6f8f8",
+              "background-dark": "#11211f",
+            },
+            fontFamily: {
+              display: ["Lexend", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden text-[#0e1b19] dark:text-background-light"
+    >
+      <header
+        class="flex items-center bg-background-light dark:bg-background-dark p-4 justify-between sticky top-0 z-20 shadow-sm"
+      >
+        <a href="userDashboard.html" class="text-primary text-2xl font-bold">FitSIL</a>
+        <button
+          class="flex size-10 shrink-0 items-center justify-center text-[#0e1b19] dark:text-background-light"
+          id="menu-button"
+        >
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </header>
+      <header
+        class="flex items-center bg-background-light dark:bg-background-dark px-4 pb-2 justify-between sticky top-[72px] z-10"
+      >
+        <h2
+          class="text-[#0e1b19] dark:text-background-light text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center"
+        >
+          Recetas Saludables
+        </h2>
+      </header>
+      <div class="px-4 py-3">
+        <label class="flex flex-col min-w-40 h-14 w-full">
+          <div class="flex w-full flex-1 items-stretch rounded-full h-full">
+            <div
+              class="text-[#0e1b19] dark:text-primary flex border-none bg-primary/20 dark:bg-primary/10 items-center justify-center pl-4 rounded-l-full border-r-0"
+            >
+              <span class="material-symbols-outlined">search</span>
+            </div>
+            <input
+              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full text-[#0e1b19] dark:text-background-light focus:outline-0 focus:ring-0 border-none bg-primary/20 dark:bg-primary/10 h-full placeholder:text-[#50958e] dark:placeholder:text-primary/70 px-4 pl-2 text-base font-normal leading-normal"
+              placeholder="Buscar recetas o ingredientes"
+              value=""
+            />
+          </div>
+        </label>
+      </div>
+      <div class="flex gap-3 px-4 pt-1 pb-4 overflow-x-auto">
+        <button
+          class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary pl-4 pr-3 text-white dark:text-[#0e1b19]"
+        >
+          <p class="text-sm font-medium leading-normal">Calorías</p>
+          <span class="material-symbols-outlined text-xl">expand_more</span>
+        </button>
+        <button
+          class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 dark:bg-primary/10 pl-4 pr-3 text-[#0e1b19] dark:text-background-light"
+        >
+          <p class="text-sm font-medium leading-normal">Proteínas</p>
+          <span class="material-symbols-outlined text-xl">expand_more</span>
+        </button>
+        <button
+          class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 dark:bg-primary/10 pl-4 pr-3 text-[#0e1b19] dark:text-background-light"
+        >
+          <p class="text-sm font-medium leading-normal">Carbohidratos</p>
+          <span class="material-symbols-outlined text-xl">expand_more</span>
+        </button>
+        <button
+          class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 dark:bg-primary/10 pl-4 pr-3 text-[#0e1b19] dark:text-background-light"
+        >
+          <p class="text-sm font-medium leading-normal">Almuerzo</p>
+          <span class="material-symbols-outlined text-xl">expand_more</span>
+        </button>
+      </div>
+      <main class="flex flex-col gap-2 pb-4">
+        <div class="px-4 @container">
+          <div
+            class="flex cursor-pointer flex-col items-stretch justify-start rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)] bg-background-light dark:bg-background-dark/80"
+          >
+            <div
+              class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover rounded-t-lg"
+              data-alt="A healthy and colorful quinoa and chicken salad in a white bowl"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWCE5BMd0KWwQEi9bhtnDbr8uA7LxLRdppS1SP-n7hgcu6QU9OMT2FcocabHUFkvQTEB8R3iCoOQxhJ-tFaYL0vSYqEsnKGNlIk6j4p6Y_oHKEdNYoo9PRnOkAs4ZVZGJkwO_g3ZHRR2tRwYrsSNpeg57zJt8JCN0taTulxsGBUQ46NmLkQSLmEHPPvyg2wkEh0vMu_YVztYYdNNMiXhqEcy_FKY1Fj6ja9TnuQkaDf-W_MZ5M-8nKnXtBKHivtlfVU2nzeoVk4nA');
+              "
+            ></div>
+            <div
+              class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4"
+            >
+              <p
+                class="text-[#0e1b19] dark:text-background-light text-lg font-bold leading-tight tracking-[-0.015em]"
+              >
+                Ensalada de Quinoa y Pollo
+              </p>
+              <p
+                class="text-[#50958e] dark:text-primary/90 text-sm font-normal leading-normal"
+              >
+                Una opción ligera y nutritiva, perfecta para el almuerzo.
+              </p>
+              <div
+                class="flex items-center gap-4 pt-2 text-[#50958e] dark:text-primary/90"
+              >
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-lg"
+                    >local_fire_department</span
+                  >
+                  <span class="text-sm">450 Kcal</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-lg"
+                    >fitness_center</span
+                  >
+                  <span class="text-sm">30g Prot.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 @container">
+          <div
+            class="flex cursor-pointer flex-col items-stretch justify-start rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)] bg-background-light dark:bg-background-dark/80"
+          >
+            <div
+              class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover rounded-t-lg"
+              data-alt="A vibrant green smoothie in a glass with a straw"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsk2mcMZujWbCWgOHZMafATvSfHqruiRcWspIyrtkNL0lktXt3hPm2iAoE2kyoFKFS-YJDwjj8mne9zjvBqLUt0aaaDVdXVRcGqwIVd7O0aIL5ngaM91D7GIcqG_ESbRcU9aWwpIrCQhtTea7214yfWJU_r7gMti1CS9LMvXcfFDFjNQuqhJK0PDLW8gsT3K6iFV1c1PwHi2IIdTTND-8vnQjXwFh4bz-GtM3G5BWUb1-WAj8TJpbJdU7a-xcMIzAH_9ZoH2Xp8Ho');
+              "
+            ></div>
+            <div
+              class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4"
+            >
+              <p
+                class="text-[#0e1b19] dark:text-background-light text-lg font-bold leading-tight tracking-[-0.015em]"
+              >
+                Batido Verde Energizante
+              </p>
+              <p
+                class="text-[#50958e] dark:text-primary/90 text-sm font-normal leading-normal"
+              >
+                Ideal para empezar el día con energía y vitaminas.
+              </p>
+              <div
+                class="flex items-center gap-4 pt-2 text-[#50958e] dark:text-primary/90"
+              >
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-lg"
+                    >local_fire_department</span
+                  >
+                  <span class="text-sm">300 Kcal</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-lg"
+                    >fitness_center</span
+                  >
+                  <span class="text-sm">15g Prot.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="px-4 @container">
+          <div
+            class="flex cursor-pointer flex-col items-stretch justify-start rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)] bg-background-light dark:bg-background-dark/80"
+          >
+            <div
+              class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover rounded-t-lg"
+              data-alt="Grilled salmon fillet with asparagus and lemon on a dark plate"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCM8IUS1bEWKn69hUOfpVOk40WTtZpx_wQoe-vtytqmrcJjpjLDPZsmq873_P9zKgLwIofrdSlUtZ_Ib-MrrGdqGhhDUr0EmHu1FHrKPAsp7VCVee-UZpZLFM-b7tmyd6o1jXMwkf255mkmNW1WsI1R2iOd6a0LViGT627NoXSycK8x4InItcu2xIqViaSOsvntYajYyGdTZnKk27MCLaK38A-r7PPSiWTEDwSHogjsNJ6tsT5ZfvLMI9FfbYs_y45Nwj3P4b1Gn4I');
+              "
+            ></div>
+            <div
+              class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4"
+            >
+              <p
+                class="text-[#0e1b19] dark:text-background-light text-lg font-bold leading-tight tracking-[-0.015em]"
+              >
+                Salmón al Horno con Espárragos
+              </p>
+              <p
+                class="text-[#50958e] dark:text-primary/90 text-sm font-normal leading-normal"
+              >
+                Una cena deliciosa y rica en Omega-3 para cuidar tu corazón.
+              </p>
+              <div
+                class="flex items-center gap-4 pt-2 text-[#50958e] dark:text-primary/90"
+              >
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-lg"
+                    >local_fire_department</span
+                  >
+                  <span class="text-sm">550 Kcal</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-lg"
+                    >fitness_center</span
+                  >
+                  <span class="text-sm">45g Prot.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <nav
+        class="sticky bottom-0 z-10 flex justify-around items-center h-20 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm border-t border-black/5 dark:border-white/5"
+      >
+        <a
+          class="flex flex-col items-center gap-1 text-[#50958e] dark:text-primary/80"
+          href="userDashboard.html"
+        >
+          <span class="material-symbols-outlined">home</span>
+          <span class="text-xs">Inicio</span>
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 text-[#50958e] dark:text-primary/80"
+          href="ejerciciosLista.html"
+        >
+          <span class="material-symbols-outlined">exercise</span>
+          <span class="text-xs">Rutinas</span>
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 text-primary dark:text-primary"
+          href="microservicioRecetas.html"
+        >
+          <span class="material-symbols-outlined font-bold" style="font-variation-settings: 'FILL' 1">restaurant_menu</span>
+          <span class="text-xs font-bold">Recetas</span>
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 text-[#50958e] dark:text-primary/80"
+          href="estadisticas.html"
+        >
+          <span class="material-symbols-outlined">bar_chart</span>
+          <span class="text-xs">Progreso</span>
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 text-[#50958e] dark:text-primary/80"
+          href="userProfile.html"
+        >
+          <span class="material-symbols-outlined">account_circle</span>
+          <span class="text-xs">Perfil</span>
+        </a>
+      </nav>
+    </div>
+  </body>
+</html>
